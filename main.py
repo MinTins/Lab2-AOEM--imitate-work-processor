@@ -35,16 +35,11 @@ class Processor:
     def to_hex(value):
         return hex(value)[2:].zfill(2)
 
-
-    @staticmethod
-    def from_hex(value):
-        return 
-
     def to_binary(self, value):
         val = abs(value)
 
         res = [0]*self.BIT_LENGTH
-        for i in range(self.BIT_LENGTH-1, -1, -1):
+        for i in range(self.BIT_LENGTH-1, 0, -1):
             res[i] = val % 2;
             val //= 2;
 
